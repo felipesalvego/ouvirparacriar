@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="bg-slate-900">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ouvir Para Criar: Transforme sua escuta em criação sonora autêntica. Livro + comunidade com bônus secretos + playlist por R$45.">
-    <meta name="keywords" content="criação sonora, escuta criativa, música, arte, comunidade musical, playlist colaborativa">
     <meta name="author" content="Felipe Salvego">
     <title>Ouvir Para Criar – Desperte Sua Criatividade | R$45</title>
     
@@ -17,23 +16,19 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#8B5CF6',    /* Roxo vibrante */
-                        primary-dark: '#7C3AED',
-                        secondary: '#3B82F6',   /* Azul */
-                        accent: '#10B981',      /* Verde para preço/ação */
-                        dark: '#0F172A',        /* Fundo principal */
-                        'dark-2': '#1E293B',    /* Cards */
-                        'dark-3': '#334155',    /* Bordas */
-                        light: '#F8FAFC',       /* Texto */
-                        'muted': '#94A3B8',     /* Texto secundário */
+                        primary: '#8B5CF6',
+                        'primary-dark': '#7C3AED',
+                        secondary: '#3B82F6',
+                        accent: '#10B981',
+                        dark: '#0F172A',
+                        'dark-2': '#1E293B',
+                        'dark-3': '#334155',
+                        light: '#F8FAFC',
+                        muted: '#94A3B8',
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Space Grotesk', 'sans-serif'],
-                    },
-                    spacing: {
-                        '18': '4.5rem',
-                        '22': '5.5rem',
                     }
                 }
             }
@@ -41,41 +36,33 @@
     </script>
     
     <style>
-        :root {
-            --gradient-primary: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%);
-            --gradient-glow: linear-gradient(135deg, rgba(139,92,246,0.15) 0%, rgba(59,130,246,0.15) 100%);
-        }
-        
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--dark);
-            color: var(--light);
+            background-color: #0F172A !important;
+            color: #F8FAFC !important;
             line-height: 1.7;
             -webkit-font-smoothing: antialiased;
         }
-        
         .space-grotesk { font-family: 'Space Grotesk', sans-serif; }
         
-        /* Tipografia com hierarquia clara */
-        h1 { font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; font-weight: 700; margin-bottom: 1.25rem; }
-        h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; font-weight: 700; margin-bottom: 1rem; }
-        h3 { font-size: 1.25rem; line-height: 1.3; font-weight: 600; margin-bottom: 0.75rem; }
+        h1 { font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; font-weight: 700; margin-bottom: 1.25rem; color: #F8FAFC; }
+        h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; font-weight: 700; margin-bottom: 1rem; color: #F8FAFC; }
+        h3 { font-size: 1.25rem; line-height: 1.3; font-weight: 600; margin-bottom: 0.75rem; color: #F8FAFC; }
+        h4 { font-weight: 600; margin-bottom: 0.5rem; color: #F8FAFC; }
         p { margin-bottom: 1rem; color: rgba(248, 250, 252, 0.92); }
-        .lead { font-size: 1.25rem; font-weight: 500; color: var(--light); margin-bottom: 1.5rem; }
-        .muted { color: var(--muted); }
         
-        /* Highlights estratégicos */
-        .highlight-purple { color: var(--primary); font-weight: 600; }
-        .highlight-blue { color: var(--secondary); font-weight: 600; }
-        .highlight-green { color: var(--accent); font-weight: 700; }
+        .highlight-purple { color: #8B5CF6 !important; font-weight: 600; }
+        .highlight-blue { color: #3B82F6 !important; font-weight: 600; }
+        .highlight-green { color: #10B981 !important; font-weight: 700; }
+        .muted { color: #94A3B8 !important; }
         
-        /* Botões com hierarquia visual */
         .btn-primary {
-            background: var(--gradient-primary);
-            color: white; font-weight: 600; padding: 14px 32px; border-radius: 12px;
+            background: linear-gradient(135deg, #8B5CF6 0%, #3B82F6 100%) !important;
+            color: white !important; font-weight: 600; padding: 14px 32px; border-radius: 12px;
             display: inline-flex; align-items: center; justify-content: center; gap: 8px;
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 14px -2px rgba(139, 92, 246, 0.35);
+            text-decoration: none;
         }
         .btn-primary:hover {
             transform: translateY(-2px);
@@ -83,46 +70,30 @@
         }
         .btn-primary:active { transform: translateY(0); }
         
-        .btn-secondary {
-            background: transparent; color: var(--light); font-weight: 500;
-            padding: 14px 32px; border-radius: 12px; border: 1.5px solid rgba(255,255,255,0.25);
-            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-            transition: all 0.2s ease;
-        }
-        .btn-secondary:hover {
-            border-color: var(--primary); background: rgba(139, 92, 246, 0.1);
-        }
-        
-        /* Preço em destaque */
         .price-box {
-            background: var(--dark-2); border: 1px solid rgba(139, 92, 246, 0.25);
+            background-color: #1E293B !important;
+            border: 1px solid rgba(139, 92, 246, 0.25);
             border-radius: 16px; padding: 20px 24px;
         }
         .price-old { text-decoration: line-through; opacity: 0.5; font-size: 1.25rem; }
-        .price-new { font-size: 2.25rem; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; }
+        .price-new { font-size: 2.25rem; font-weight: 800; color: #10B981 !important; letter-spacing: -0.5px; }
         .price-badge {
-            background: var(--accent); color: var(--dark); font-size: 0.75rem; font-weight: 700;
+            background: #10B981 !important; color: #0F172A !important; font-size: 0.75rem; font-weight: 700;
             padding: 4px 10px; border-radius: 6px; display: inline-block; margin-left: 8px;
         }
         
-        /* Cards com profundidade sutil */
         .card {
-            background: var(--dark-2); border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 16px; padding: 24px; transition: all 0.25s ease;
+            background-color: #1E293B !important;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px; padding: 24px;
+            transition: all 0.25s ease;
         }
         .card:hover {
             border-color: rgba(139, 92, 246, 0.4);
             transform: translateY(-3px);
             box-shadow: 0 20px 40px -20px rgba(0,0,0,0.4);
         }
-        .card-icon {
-            width: 56px; height: 56px; border-radius: 14px;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 16px; font-size: 22px;
-            background: var(--gradient-glow); border: 1px solid rgba(139, 92, 246, 0.3);
-        }
         
-        /* Book Cover com efeito sutil */
         .book-cover {
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.08);
             transform: perspective(1000px) rotateY(-8deg);
@@ -132,10 +103,10 @@
         .book-cover:hover { transform: perspective(1000px) rotateY(-4deg) scale(1.02); }
         .book-cover img { width: 100%; height: 100%; object-fit: cover; }
         
-        /* Sticky CTA discreto */
         .sticky-cta {
             position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(100px);
-            background: var(--dark-2); border: 1px solid rgba(139, 92, 246, 0.3);
+            background-color: #1E293B !important;
+            border: 1px solid rgba(139, 92, 246, 0.3);
             border-radius: 14px; padding: 12px 20px; z-index: 1000;
             transition: transform 0.3s ease, opacity 0.3s ease;
             opacity: 0; visibility: hidden; width: 90%; max-width: 420px;
@@ -143,47 +114,41 @@
         }
         .sticky-cta.visible { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
         
-        /* Divisores sutis */
-        .section-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 2.5rem 0; }
-        
-        /* Badges e tags */
         .badge {
             display: inline-flex; align-items: center; gap: 6px;
-            background: rgba(139, 92, 246, 0.15); color: var(--primary);
+            background-color: rgba(139, 92, 246, 0.15) !important;
+            color: #8B5CF6 !important;
             padding: 6px 14px; border-radius: 20px; font-size: 0.875rem; font-weight: 500;
             border: 1px solid rgba(139, 92, 246, 0.3);
         }
         .badge-secret {
-            background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(139,92,246,0.2));
-            color: var(--accent); border-color: rgba(16, 185, 129, 0.4);
+            background: linear-gradient(135deg, rgba(16,185,129,0.2), rgba(139,92,246,0.2)) !important;
+            color: #10B981 !important; border-color: rgba(16, 185, 129, 0.4);
         }
         
-        /* Lista com check */
         .check-list li {
             display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;
+            color: #F8FAFC;
         }
-        .check-list .check {
-            color: var(--accent); font-weight: bold; font-size: 1.1rem; margin-top: 2px;
-        }
+        .check { color: #10B981 !important; font-weight: bold; font-size: 1.1rem; margin-top: 2px; }
         
-        /* Seções com padding consistente */
         .section { padding: 80px 0; }
         @media (max-width: 768px) { .section { padding: 60px 0; } }
         
-        /* Container */
         .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
         @media (max-width: 640px) { .container { padding: 0 20px; } }
         
-        /* Acessibilidade */
+        details summary { cursor: pointer; list-style: none; }
+        details summary::-webkit-details-marker { display: none; }
+        
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
         }
-        a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     </style>
 </head>
-<body class="antialiased">
+<body class="bg-[#0F172A] text-[#F8FAFC]">
 
-    <!-- Sticky CTA (aparece após scroll) -->
+    <!-- Sticky CTA -->
     <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" 
        class="sticky-cta" id="stickyCta" aria-label="Comprar por R$45">
         <div class="btn-primary w-full text-sm">
@@ -191,11 +156,10 @@
         </div>
     </a>
 
-    <!-- HERO SECTION -->
+    <!-- HERO -->
     <section class="section" style="padding-top: 40px; padding-bottom: 60px;">
         <div class="container">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <!-- Conteúdo -->
                 <div>
                     <span class="badge mb-6"><i class="fas fa-sparkles"></i> Lançamento Exclusivo</span>
                     
@@ -203,9 +167,9 @@
                         Desperte o <span class="highlight-purple">artista</span> que existe em você
                     </h1>
                     
-                    <p class="lead">Transforme sua forma de ouvir e criar música com método único.</p>
+                    <p class="text-xl font-medium mb-6" style="color: #F8FAFC;">Transforme sua forma de ouvir e criar música com método único.</p>
                     
-                    <p class="mb-6">
+                    <p class="mb-6" style="color: rgba(248,250,252,0.92);">
                         <strong class="highlight-blue">Ouvir Para Criar</strong> é o guia definitivo para desenvolver sua escuta criativa e produzir música autêntica. Por apenas <strong class="highlight-green">R$45</strong>, você recebe:
                     </p>
                     
@@ -216,34 +180,31 @@
                         <li><span class="check">✓</span> Exercícios para aplicar imediatamente</li>
                     </ul>
                     
-                    <!-- Preço em destaque -->
                     <div class="price-box mb-8 max-w-md">
                         <div class="flex items-baseline gap-4 mb-3">
                             <span class="price-old">R$90</span>
                             <span class="price-new">R$45</span>
                             <span class="price-badge">50% OFF</span>
                         </div>
-                        <p class="text-sm muted mb-4">• Oferta por tempo limitado • Economia de R$45</p>
+                        <p class="text-sm mb-4" style="color: #94A3B8;">• Oferta por tempo limitado • Economia de R$45</p>
                         
                         <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" 
                            class="btn-primary w-full">
                             <i class="fas fa-shopping-cart"></i> Quero meu livro + bônus secretos!
                         </a>
                         
-                        <p class="text-xs muted text-center mt-3">
-                            <i class="fas fa-shield-alt text-accent mr-1"></i> Pagamento seguro • Garantia de 7 dias
+                        <p class="text-xs text-center mt-3" style="color: #94A3B8;">
+                            <i class="fas fa-shield-alt" style="color: #10B981;"></i> Pagamento seguro • Garantia de 7 dias
                         </p>
                     </div>
                     
-                    <!-- Trust badges inline -->
-                    <div class="flex flex-wrap gap-4 text-sm muted">
-                        <span><i class="fas fa-shield-alt text-accent mr-1.5"></i>Garantia 7 dias</span>
-                        <span><i class="fas fa-bolt text-secondary mr-1.5"></i>Acesso imediato</span>
-                        <span><i class="fas fa-lock text-primary mr-1.5"></i>100% seguro</span>
+                    <div class="flex flex-wrap gap-4 text-sm" style="color: #94A3B8;">
+                        <span><i class="fas fa-shield-alt" style="color: #10B981;"></i> Garantia 7 dias</span>
+                        <span><i class="fas fa-bolt" style="color: #3B82F6;"></i> Acesso imediato</span>
+                        <span><i class="fas fa-lock" style="color: #8B5CF6;"></i> 100% seguro</span>
                     </div>
                 </div>
                 
-                <!-- Imagem do livro -->
                 <div class="flex justify-center lg:justify-end">
                     <div class="book-cover w-64 md:w-72">
                         <img src="https://i.ibb.co/fVBgJ0tX/Chat-GPT-Image-29-de-jul-de-2025-15-05-20.png" 
@@ -255,83 +216,95 @@
     </section>
 
     <!-- TRUST METRICS -->
-    <section class="py-14 bg-dark-2/40 border-y border-white/5" id="features">
+    <section class="py-14" style="background-color: rgba(30,41,59,0.4); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
         <div class="container">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 <div class="p-4">
-                    <div class="card-icon mx-auto mb-3"><i class="fas fa-users text-primary"></i></div>
-                    <p class="space-grotesk text-2xl font-bold highlight-green">+150</p>
-                    <p class="text-sm muted">Criadores impactados</p>
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);">
+                        <i class="fas fa-users" style="color: #8B5CF6; font-size: 22px;"></i>
+                    </div>
+                    <p class="space-grotesk text-2xl font-bold" style="color: #10B981;">+150</p>
+                    <p class="text-sm" style="color: #94A3B8;">Criadores impactados</p>
                 </div>
                 <div class="p-4">
-                    <div class="card-icon mx-auto mb-3"><i class="fas fa-star text-yellow-400"></i></div>
-                    <p class="space-grotesk text-2xl font-bold highlight-green">4.9/5</p>
-                    <p class="text-sm muted">Avaliação média</p>
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);">
+                        <i class="fas fa-star" style="color: #FACC15; font-size: 22px;"></i>
+                    </div>
+                    <p class="space-grotesk text-2xl font-bold" style="color: #10B981;">4.9/5</p>
+                    <p class="text-sm" style="color: #94A3B8;">Avaliação média</p>
                 </div>
                 <div class="p-4">
-                    <div class="card-icon mx-auto mb-3"><i class="fas fa-shield-alt text-accent"></i></div>
-                    <p class="space-grotesk text-2xl font-bold highlight-green">7 dias</p>
-                    <p class="text-sm muted">Garantia total</p>
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);">
+                        <i class="fas fa-shield-alt" style="color: #10B981; font-size: 22px;"></i>
+                    </div>
+                    <p class="space-grotesk text-2xl font-bold" style="color: #10B981;">7 dias</p>
+                    <p class="text-sm" style="color: #94A3B8;">Garantia total</p>
                 </div>
                 <div class="p-4">
-                    <div class="card-icon mx-auto mb-3"><i class="fas fa-bolt text-secondary"></i></div>
-                    <p class="space-grotesk text-2xl font-bold highlight-green">Imediato</p>
-                    <p class="text-sm muted">Acesso após compra</p>
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);">
+                        <i class="fas fa-bolt" style="color: #3B82F6; font-size: 22px;"></i>
+                    </div>
+                    <p class="space-grotesk text-2xl font-bold" style="color: #10B981;">Imediato</p>
+                    <p class="text-sm" style="color: #94A3B8;">Acesso após compra</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PROBLEM SECTION -->
-    <section class="section bg-gradient-to-b from-dark to-dark-2">
+    <!-- PROBLEM -->
+    <section class="section" style="background: linear-gradient(to bottom, #0F172A, #1E293B);">
         <div class="container">
             <div class="max-w-3xl mx-auto text-center">
                 <span class="badge mb-5"><i class="fas fa-bullseye"></i> Para quem é isso?</span>
                 <h2 class="mb-6">Pare de engavetar seu <span class="highlight-purple">sonho criativo</span></h2>
                 
-                <div class="space-y-5 text-lg opacity-95">
+                <div class="space-y-5 text-lg" style="color: rgba(248,250,252,0.95);">
                     <p>Você sente a chama da criação, mas algo te trava. Medo. Comparação. Falta de clareza.</p>
-                    <p class="highlight-blue font-medium">Sua voz única está aí, esperando para ser ouvida.</p>
+                    <p class="font-medium" style="color: #3B82F6;">Sua voz única está aí, esperando para ser ouvida.</p>
                     <p><strong class="highlight-green">Ouvir Para Criar</strong> é o caminho para transformar sua escuta em ação — criando com coragem, autenticidade e alma, sem fórmulas mágicas.</p>
                 </div>
             </div>
             
-            <!-- Cards de benefícios -->
             <div class="grid md:grid-cols-3 gap-6 mt-14 max-w-5xl mx-auto">
                 <div class="card text-center">
-                    <div class="card-icon"><i class="fas fa-brain text-primary"></i></div>
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style="background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.3);">
+                        <i class="fas fa-brain" style="color: #8B5CF6; font-size: 22px;"></i>
+                    </div>
                     <h3 class="mb-2">Desbloqueio Mental</h3>
-                    <p class="text-sm muted">Liberte padrões que limitam sua expressão e encontre clareza para criar.</p>
+                    <p class="text-sm" style="color: #94A3B8;">Liberte padrões que limitam sua expressão e encontre clareza para criar.</p>
                 </div>
                 <div class="card text-center">
-                    <div class="card-icon"><i class="fas fa-ear-listen text-secondary"></i></div>
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style="background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3);">
+                        <i class="fas fa-ear-listen" style="color: #3B82F6; font-size: 22px;"></i>
+                    </div>
                     <h3 class="mb-2">Escuta Profunda</h3>
-                    <p class="text-sm muted">Aprenda a ouvir o mundo, o silêncio e a si mesmo como matéria-prima.</p>
+                    <p class="text-sm" style="color: #94A3B8;">Aprenda a ouvir o mundo, o silêncio e a si mesmo como matéria-prima.</p>
                 </div>
                 <div class="card text-center">
-                    <div class="card-icon"><i class="fas fa-lightbulb text-accent"></i></div>
+                    <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style="background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.3);">
+                        <i class="fas fa-lightbulb" style="color: #10B981; font-size: 22px;"></i>
+                    </div>
                     <h3 class="mb-2">Fluxo Autêntico</h3>
-                    <p class="text-sm muted">Desenvolva um processo criativo que respeite sua essência e traga prazer.</p>
+                    <p class="text-sm" style="color: #94A3B8;">Desenvolva um processo criativo que respeite sua essência.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SOLUTION SECTION -->
-    <section class="section">
+    <!-- SOLUTION -->
+    <section class="section" style="background-color: #0F172A;">
         <div class="container">
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                     <span class="badge mb-5"><i class="fas fa-compass"></i> O Método</span>
                     <h2 class="mb-5">A <span class="highlight-green">virada</span> que você precisa</h2>
                     
-                    <div class="space-y-4 text-lg opacity-95">
+                    <div class="space-y-4 text-lg" style="color: rgba(248,250,252,0.95);">
                         <p><strong class="highlight-blue">Ouvir Para Criar</strong> não é sobre técnicas ou fórmulas prontas. É sobre <strong>presença</strong>. Sobre ouvir o mundo, o silêncio e a si mesmo como matéria-prima para a criação.</p>
                         <p>Este guia prático te leva a desbloquear sua criatividade e criar com autenticidade — sem pressão, sem comparação, apenas você e sua voz única.</p>
                         <p>É a ponte entre o <em>desejo</em> de criar e a <strong>ação real</strong>, viva e imperfeita.</p>
                     </div>
                     
-                    <!-- Benefícios em lista -->
                     <ul class="check-list mt-8">
                         <li><span class="check">→</span> Transformar sua escuta em criação autêntica</li>
                         <li><span class="check">→</span> Perceber o mundo como fonte de inspiração</li>
@@ -340,53 +313,51 @@
                     </ul>
                     
                     <div class="mt-10">
-                        <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" 
-                           class="btn-primary">
+                        <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" class="btn-primary">
                             <i class="fas fa-book-open"></i> Comece sua jornada agora
                         </a>
                     </div>
                 </div>
                 
-                <!-- O que você recebe -->
                 <div class="card">
-                    <h3 class="highlight-purple flex items-center gap-3 mb-6">
+                    <h3 class="flex items-center gap-3 mb-6" style="color: #8B5CF6;">
                         <i class="fas fa-gift"></i> O que você recebe
                     </h3>
                     <div class="space-y-4">
-                        <div class="flex gap-4 items-start p-4 bg-dark-3/30 rounded-xl">
-                            <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-file-pdf text-primary"></i>
+                        <div class="flex gap-4 items-start p-4 rounded-xl" style="background-color: rgba(51,65,85,0.3);">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(139,92,246,0.2);">
+                                <i class="fas fa-file-pdf" style="color: #8B5CF6;"></i>
                             </div>
                             <div>
-                                <p class="font-semibold">Livro Digital (PDF)</p>
-                                <p class="text-sm muted">50 páginas de conteúdo prático e exercícios</p>
+                                <p class="font-semibold" style="color: #F8FAFC;">Livro Digital (PDF)</p>
+                                <p class="text-sm" style="color: #94A3B8;">50 páginas de conteúdo prático e exercícios</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 items-start p-4 bg-dark-3/30 rounded-xl">
-                            <div class="w-10 h-10 rounded-lg bg-secondary/20 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-users text-secondary"></i>
+                        <div class="flex gap-4 items-start p-4 rounded-xl" style="background-color: rgba(51,65,85,0.3);">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(59,130,246,0.2);">
+                                <i class="fas fa-users" style="color: #3B82F6;"></i>
                             </div>
                             <div>
-                                <p class="font-semibold">Comunidade Exclusiva</p>
-                                <p class="text-sm muted">Acesso vitalício + <span class="highlight-purple">bônus secretos</span> só para membros</p>
+                                <p class="font-semibold" style="color: #F8FAFC;">Comunidade Exclusiva</p>
+                                <p class="text-sm" style="color: #94A3B8;">Acesso vitalício + <span class="highlight-purple">bônus secretos</span> só para membros</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 items-start p-4 bg-dark-3/30 rounded-xl">
-                            <div class="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-music text-accent"></i>
+                        <div class="flex gap-4 items-start p-4 rounded-xl" style="background-color: rgba(51,65,85,0.3);">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(16,185,129,0.2);">
+                                <i class="fas fa-music" style="color: #10B981;"></i>
                             </div>
                             <div>
-                                <p class="font-semibold">Playlist Colaborativa</p>
-                                <p class="text-sm muted">Curadoria coletiva de referências sonoras</p>
+                                <p class="font-semibold" style="color: #F8FAFC;">Playlist Colaborativa</p>
+                                <p class="text-sm" style="color: #94A3B8;">Curadoria coletiva de referências sonoras</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 items-start p-4 bg-dark-3/30 rounded-xl border border-accent/30">
-                            <div class="w-10 h-10 rounded-lg bg-accent/20 flex items-center justify-center flex-shrink-0">
-                                <i class="fas fa-lock text-accent"></i>
+                        <div class="flex gap-4 items-start p-4 rounded-xl" style="background-color: rgba(51,65,85,0.3); border: 1px solid rgba(16,185,129,0.3);">
+                            <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(16,185,129,0.2);">
+                                <i class="fas fa-lock" style="color: #10B981;"></i>
                             </div>
                             <div>
-                                <p class="font-semibold highlight-green">🎁 Bônus Secretos</p>
-                                <p class="text-sm muted">Surpresas exclusivas liberadas apenas dentro da comunidade (conteúdos, workshops e conexões)</p>
+                                <p class="font-semibold" style="color: #10B981;">🎁 Bônus Secretos</p>
+                                <p class="text-sm" style="color: #94A3B8;">Surpresas exclusivas liberadas apenas dentro da comunidade (conteúdos, workshops e conexões)</p>
                             </div>
                         </div>
                     </div>
@@ -395,8 +366,8 @@
         </div>
     </section>
 
-    <!-- AUDIENCE SECTION -->
-    <section class="section bg-gradient-to-b from-dark-2 to-dark">
+    <!-- AUDIENCE -->
+    <section class="section" style="background: linear-gradient(to bottom, #1E293B, #0F172A);">
         <div class="container">
             <div class="max-w-4xl mx-auto">
                 <h2 class="text-center mb-10">Este livro é para você se...</h2>
@@ -409,12 +380,11 @@
                     <div class="card"><p><span class="highlight-blue mr-3">•</span>Está cansado de se comparar e quer redescobrir a alegria de criar</p></div>
                 </div>
                 <div class="mt-12 text-center card p-8 max-w-2xl mx-auto">
-                    <p class="mb-6">
+                    <p class="mb-6" style="color: #F8FAFC;">
                         Se você se identificou com <strong>pelo menos um</strong> desses pontos, 
                         <span class="highlight-purple font-semibold">Ouvir Para Criar</span> foi feito para você!
                     </p>
-                    <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" 
-                       class="btn-primary">
+                    <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" class="btn-primary">
                         <i class="fas fa-check-circle"></i> Sim, quero começar!
                     </a>
                 </div>
@@ -423,78 +393,77 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section class="section">
+    <section class="section" style="background-color: #0F172A;">
         <div class="container">
             <h2 class="text-center mb-10">O que os <span class="highlight-purple">leitores</span> estão dizendo</h2>
             <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <div class="card">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center font-bold text-sm">A</div>
+                        <div class="w-11 h-11 rounded-full flex items-center justify-center font-bold text-sm" style="background: linear-gradient(135deg, #8B5CF6, #3B82F6);">A</div>
                         <div>
-                            <p class="font-medium text-sm">Ana, produtora musical</p>
+                            <p class="font-medium text-sm" style="color: #F8FAFC;">Ana, produtora musical</p>
                             <div class="flex text-yellow-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
-                    <p class="text-sm mb-3">"Me ajudou a sair do bloqueio criativo. Finalmente criei uma faixa que sinto ser <strong>minha</strong>!"</p>
-                    <p class="text-xs muted"><i class="fas fa-calendar mr-1"></i> Há 2 semanas</p>
+                    <p class="text-sm mb-3" style="color: rgba(248,250,252,0.9);">"Me ajudou a sair do bloqueio criativo. Finalmente criei uma faixa que sinto ser <strong>minha</strong>!"</p>
+                    <p class="text-xs" style="color: #94A3B8;"><i class="fas fa-calendar mr-1"></i> Há 2 semanas</p>
                 </div>
                 <div class="card">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-secondary to-cyan-400 flex items-center justify-center font-bold text-sm">J</div>
+                        <div class="w-11 h-11 rounded-full flex items-center justify-center font-bold text-sm" style="background: linear-gradient(135deg, #3B82F6, #06B6D4);">J</div>
                         <div>
-                            <p class="font-medium text-sm">João, músico iniciante</p>
+                            <p class="font-medium text-sm" style="color: #F8FAFC;">João, músico iniciante</p>
                             <div class="flex text-yellow-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
-                    <p class="text-sm mb-3">"Mudou minha forma de ouvir o mundo. Cada som agora é inspiração. Vale cada centavo dos R$45!"</p>
-                    <p class="text-xs muted"><i class="fas fa-calendar mr-1"></i> Há 1 mês</p>
+                    <p class="text-sm mb-3" style="color: rgba(248,250,252,0.9);">"Mudou minha forma de ouvir o mundo. Cada som agora é inspiração. Vale cada centavo dos R$45!"</p>
+                    <p class="text-xs" style="color: #94A3B8;"><i class="fas fa-calendar mr-1"></i> Há 1 mês</p>
                 </div>
                 <div class="card">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-11 h-11 rounded-full bg-gradient-to-br from-accent to-green-400 flex items-center justify-center font-bold text-dark text-sm">C</div>
+                        <div class="w-11 h-11 rounded-full flex items-center justify-center font-bold text-dark text-sm" style="background: linear-gradient(135deg, #10B981, #4ADE80);">C</div>
                         <div>
-                            <p class="font-medium text-sm">Clara, artista sonora</p>
+                            <p class="font-medium text-sm" style="color: #F8FAFC;">Clara, artista sonora</p>
                             <div class="flex text-yellow-400 text-xs"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                         </div>
                     </div>
-                    <p class="text-sm mb-3">"A abordagem do Felipe é única. Redescobri a alegria de criar sem pressão. Os bônus da comunidade são incríveis!"</p>
-                    <p class="text-xs muted"><i class="fas fa-calendar mr-1"></i> Há 3 semanas</p>
+                    <p class="text-sm mb-3" style="color: rgba(248,250,252,0.9);">"A abordagem do Felipe é única. Redescobri a alegria de criar sem pressão. Os bônus da comunidade são incríveis!"</p>
+                    <p class="text-xs" style="color: #94A3B8;"><i class="fas fa-calendar mr-1"></i> Há 3 semanas</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- AUTHOR SECTION -->
-    <section class="section bg-gradient-to-b from-dark to-dark-2">
+    <!-- AUTHOR -->
+    <section class="section" style="background: linear-gradient(to bottom, #0F172A, #1E293B);">
         <div class="container">
             <div class="grid lg:grid-cols-3 gap-10 items-center">
                 <div class="lg:col-span-1 flex justify-center">
                     <div class="relative">
-                        <div class="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-2xl opacity-20"></div>
+                        <div class="absolute inset-0 rounded-full blur-2xl opacity-20" style="background: linear-gradient(135deg, #8B5CF6, #3B82F6);"></div>
                         <img src="https://i.ibb.co/YFNKczYt/71951084-10213887324129113-5108247202065547264-n.jpg" 
                              alt="Felipe Salvego" 
-                             class="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4 border-dark-2 shadow-xl">
+                             class="relative w-40 h-40 md:w-48 md:h-48 rounded-full object-cover border-4" style="border-color: #1E293B;">
                     </div>
                 </div>
                 <div class="lg:col-span-2">
                     <span class="badge mb-4"><i class="fas fa-user"></i> Sobre o Autor</span>
                     <h2 class="mb-3">Conheça <span class="highlight-purple">Felipe Salvego</span></h2>
-                    <p class="text-lg muted mb-5">Músico, produtor e educador apaixonado pela arte da escuta</p>
+                    <p class="text-lg mb-5" style="color: #94A3B8;">Músico, produtor e educador apaixonado pela arte da escuta</p>
                     
-                    <div class="space-y-4 opacity-95">
+                    <div class="space-y-4" style="color: rgba(248,250,252,0.95);">
                         <p>Imagine ouvir o mundo como uma <span class="highlight-green">sinfonia</span>. Essa é a essência de <strong class="highlight-purple">Felipe Salvego</strong>. Formado em Produção Fonográfica pela FATEC e com formação no Conservatório de Tatuí, ele colabora com artistas do Brasil e do mundo.</p>
                         <p>Nascido em uma família de músicos, aprendeu a ouvir antes mesmo de entender o que era <span class="highlight-blue">escutar</span>. Para ele, não se trata só de notas, mas da narrativa, das intenções, do <span class="highlight-green">pulso da vida</span>.</p>
                         <p>Hoje, Felipe conduz vivências em SESCs e centros culturais. <strong class="highlight-blue">Ouvir Para Criar</strong> é o reflexo desse trabalho.</p>
                     </div>
                     
-                    <blockquote class="bg-dark-3 border-l-4 border-primary p-5 rounded-r-xl mt-6 italic">
-                        <p class="text-sm">"Escrevi este livro para redescobrir a escuta — não só dos outros, mas a minha própria. É um convite para criar com os pés no chão, com simplicidade e profundidade."</p>
-                        <p class="font-medium text-right mt-3 not-italic text-sm">— Felipe Salvego</p>
+                    <blockquote class="p-5 rounded-r-xl mt-6 italic" style="background-color: rgba(51,65,85,0.5); border-left: 4px solid #8B5CF6;">
+                        <p class="text-sm" style="color: rgba(248,250,252,0.85);">"Escrevi este livro para redescobrir a escuta — não só dos outros, mas a minha própria. É um convite para criar com os pés no chão, com simplicidade e profundidade."</p>
+                        <p class="font-medium text-right mt-3 not-italic text-sm" style="color: #F8FAFC;">— Felipe Salvego</p>
                     </blockquote>
                     
                     <div class="mt-6">
-                        <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" 
-                           class="btn-primary">
+                        <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" class="btn-primary">
                             <i class="fas fa-book-open"></i> Comece com Felipe
                         </a>
                     </div>
@@ -503,8 +472,8 @@
         </div>
     </section>
 
-    <!-- BONUSES SECTION (com ênfase nos secretos) -->
-    <section class="section bg-gradient-to-b from-dark-2 to-dark">
+    <!-- BONUSES -->
+    <section class="section" style="background: linear-gradient(to bottom, #1E293B, #0F172A);">
         <div class="container">
             <div class="text-center mb-10">
                 <span class="badge badge-secret mb-4"><i class="fas fa-gift"></i> Bônus Inclusos</span>
@@ -512,105 +481,101 @@
             </div>
             
             <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <!-- Comunidade com bônus secretos -->
-                <div class="card border-primary/30 hover:border-primary/60">
+                <div class="card" style="border-color: rgba(139,92,246,0.3);">
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center flex-shrink-0 border border-primary/30">
-                            <i class="fas fa-users text-primary text-xl"></i>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(139,92,246,0.2); border: 1px solid rgba(139,92,246,0.3);">
+                            <i class="fas fa-users text-xl" style="color: #8B5CF6;"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-2">Comunidade Exclusiva</h3>
-                            <p class="text-sm mb-3">Junte-se a um grupo vibrante de criadores. Troque experiências, discuta os exercícios e conecte-se com quem compartilha sua jornada.</p>
-                            <div class="bg-dark-3/50 rounded-lg p-3 border border-accent/30">
-                                <p class="text-xs highlight-green flex items-center gap-1.5">
+                            <h3 class="text-lg font-semibold mb-2" style="color: #F8FAFC;">Comunidade Exclusiva</h3>
+                            <p class="text-sm mb-3" style="color: rgba(248,250,252,0.9);">Junte-se a um grupo vibrante de criadores. Troque experiências, discuta os exercícios e conecte-se com quem compartilha sua jornada.</p>
+                            <div class="rounded-lg p-3" style="background: rgba(51,65,85,0.5); border: 1px solid rgba(16,185,129,0.3);">
+                                <p class="text-xs flex items-center gap-1.5" style="color: #10B981;">
                                     <i class="fas fa-lock"></i>
                                     <strong>Bônus secretos liberados apenas aqui:</strong> workshops surpresa, conexões exclusivas e conteúdos inéditos
                                 </p>
                             </div>
-                            <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full mt-3 font-medium">Valor: R$29 → Grátis</span>
+                            <span class="inline-block text-xs px-3 py-1 rounded-full mt-3 font-medium" style="background: rgba(16,185,129,0.1); color: #10B981;">Valor: R$29 → Grátis</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Playlist -->
                 <div class="card">
                     <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center flex-shrink-0 border border-secondary/30">
-                            <i class="fas fa-headphones text-secondary text-xl"></i>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(59,130,246,0.2); border: 1px solid rgba(59,130,246,0.3);">
+                            <i class="fas fa-headphones text-xl" style="color: #3B82F6;"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-2">Playlist Colaborativa</h3>
-                            <p class="text-sm mb-3">Contribua com suas músicas favoritas e descubra referências dos outros membros. Uma fonte constante de inspiração.</p>
-                            <span class="inline-block bg-accent/10 text-accent text-xs px-3 py-1 rounded-full mt-3 font-medium">Valor: R$19 → Grátis</span>
+                            <h3 class="text-lg font-semibold mb-2" style="color: #F8FAFC;">Playlist Colaborativa</h3>
+                            <p class="text-sm mb-3" style="color: rgba(248,250,252,0.9);">Contribua com suas músicas favoritas e descubra referências dos outros membros. Uma fonte constante de inspiração.</p>
+                            <span class="inline-block text-xs px-3 py-1 rounded-full mt-3 font-medium" style="background: rgba(16,185,129,0.1); color: #10B981;">Valor: R$19 → Grátis</span>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Valor total -->
             <div class="text-center mt-10">
-                <div class="inline-flex flex-wrap items-center justify-center gap-4 bg-dark-3 px-6 py-4 rounded-xl border border-primary/30">
-                    <span class="text-lg">Valor total dos bônus:</span>
-                    <span class="text-2xl font-bold highlight-green">R$48+</span>
-                    <span class="text-sm muted line-through">R$0 para você</span>
+                <div class="inline-flex flex-wrap items-center justify-center gap-4 px-6 py-4 rounded-xl" style="background-color: rgba(51,65,85,0.5); border: 1px solid rgba(139,92,246,0.3);">
+                    <span class="text-lg" style="color: #F8FAFC;">Valor total dos bônus:</span>
+                    <span class="text-2xl font-bold" style="color: #10B981;">R$48+</span>
+                    <span class="text-sm line-through" style="color: #94A3B8;">R$0 para você</span>
                     <span class="badge badge-secret text-xs"><i class="fas fa-star"></i> + bônus secretos</span>
                 </div>
             </div>
             
             <div class="text-center mt-10">
-                <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" 
-                   class="btn-primary text-lg">
+                <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" class="btn-primary text-lg">
                     <i class="fas fa-gift"></i> Quero o livro + bônus secretos por R$45!
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- FAQ SECTION -->
-    <section class="section">
+    <!-- FAQ -->
+    <section class="section" style="background-color: #0F172A;">
         <div class="container">
             <h2 class="text-center mb-10">Perguntas <span class="highlight-green">Frequentes</span></h2>
             <div class="max-w-3xl mx-auto space-y-4">
-                <details class="card group">
-                    <summary class="font-medium cursor-pointer flex justify-between items-center py-2">
-                        <span><i class="fas fa-question-circle text-primary mr-3"></i>Preciso saber música para ler o livro?</span>
-                        <i class="fas fa-chevron-down text-sm transition group-open:rotate-180"></i>
+                <details class="card">
+                    <summary class="font-medium flex justify-between items-center py-2" style="color: #F8FAFC;">
+                        <span><i class="fas fa-question-circle mr-3" style="color: #8B5CF6;"></i>Preciso saber música para ler o livro?</span>
+                        <i class="fas fa-chevron-down text-sm" style="transition: transform 0.3s;"></i>
                     </summary>
-                    <p class="mt-3 text-sm muted">Não! <strong>Ouvir Para Criar</strong> é para todos: iniciantes, músicos experientes ou apenas apaixonados por som. O foco é desenvolver sua <em>escuta criativa</em>.</p>
+                    <p class="mt-3 text-sm" style="color: #94A3B8;">Não! <strong>Ouvir Para Criar</strong> é para todos: iniciantes, músicos experientes ou apenas apaixonados por som. O foco é desenvolver sua <em>escuta criativa</em>.</p>
                 </details>
-                <details class="card group">
-                    <summary class="font-medium cursor-pointer flex justify-between items-center py-2">
-                        <span><i class="fas fa-file-alt text-secondary mr-3"></i>O livro é físico ou digital?</span>
-                        <i class="fas fa-chevron-down text-sm transition group-open:rotate-180"></i>
+                <details class="card">
+                    <summary class="font-medium flex justify-between items-center py-2" style="color: #F8FAFC;">
+                        <span><i class="fas fa-file-alt mr-3" style="color: #3B82F6;"></i>O livro é físico ou digital?</span>
+                        <i class="fas fa-chevron-down text-sm" style="transition: transform 0.3s;"></i>
                     </summary>
-                    <p class="mt-3 text-sm muted">Digital (PDF de alta qualidade), enviado <strong>imediatamente</strong> após o pagamento. Você começa em minutos, em qualquer dispositivo.</p>
+                    <p class="mt-3 text-sm" style="color: #94A3B8;">Digital (PDF de alta qualidade), enviado <strong>imediatamente</strong> após o pagamento. Você começa em minutos, em qualquer dispositivo.</p>
                 </details>
-                <details class="card group">
-                    <summary class="font-medium cursor-pointer flex justify-between items-center py-2">
-                        <span><i class="fas fa-shield-alt text-accent mr-3"></i>E se eu não gostar?</span>
-                        <i class="fas fa-chevron-down text-sm transition group-open:rotate-180"></i>
+                <details class="card">
+                    <summary class="font-medium flex justify-between items-center py-2" style="color: #F8FAFC;">
+                        <span><i class="fas fa-shield-alt mr-3" style="color: #10B981;"></i>E se eu não gostar?</span>
+                        <i class="fas fa-chevron-down text-sm" style="transition: transform 0.3s;"></i>
                     </summary>
-                    <p class="mt-3 text-sm muted">Você tem <strong>7 dias de garantia incondicional</strong>. Se não valer a pena, devolvemos 100% do seu investimento. Sem perguntas.</p>
+                    <p class="mt-3 text-sm" style="color: #94A3B8;">Você tem <strong>7 dias de garantia incondicional</strong>. Se não valer a pena, devolvemos 100% do seu investimento. Sem perguntas.</p>
                 </details>
-                <details class="card group">
-                    <summary class="font-medium cursor-pointer flex justify-between items-center py-2">
-                        <span><i class="fas fa-gift text-primary mr-3"></i>O que são os bônus secretos?</span>
-                        <i class="fas fa-chevron-down text-sm transition group-open:rotate-180"></i>
+                <details class="card">
+                    <summary class="font-medium flex justify-between items-center py-2" style="color: #F8FAFC;">
+                        <span><i class="fas fa-gift mr-3" style="color: #8B5CF6;"></i>O que são os bônus secretos?</span>
+                        <i class="fas fa-chevron-down text-sm" style="transition: transform 0.3s;"></i>
                     </summary>
-                    <p class="mt-3 text-sm muted">São conteúdos exclusivos liberados apenas dentro da comunidade: workshops surpresa, conexões com artistas, materiais inéditos e experiências que não estão no livro. Você descobre ao entrar! 🎁</p>
+                    <p class="mt-3 text-sm" style="color: #94A3B8;">São conteúdos exclusivos liberados apenas dentro da comunidade: workshops surpresa, conexões com artistas, materiais inéditos e experiências que não estão no livro. Você descobre ao entrar! 🎁</p>
                 </details>
-                <details class="card group">
-                    <summary class="font-medium cursor-pointer flex justify-between items-center py-2">
-                        <span><i class="fas fa-credit-card text-accent mr-3"></i>Quais formas de pagamento?</span>
-                        <i class="fas fa-chevron-down text-sm transition group-open:rotate-180"></i>
+                <details class="card">
+                    <summary class="font-medium flex justify-between items-center py-2" style="color: #F8FAFC;">
+                        <span><i class="fas fa-credit-card mr-3" style="color: #10B981;"></i>Quais formas de pagamento?</span>
+                        <i class="fas fa-chevron-down text-sm" style="transition: transform 0.3s;"></i>
                     </summary>
-                    <p class="mt-3 text-sm muted">Cartão de crédito (todas as bandeiras), PIX e outras opções via plataforma segura Kirvano. Seus dados são protegidos com criptografia.</p>
+                    <p class="mt-3 text-sm" style="color: #94A3B8;">Cartão de crédito (todas as bandeiras), PIX e outras opções via plataforma segura Kirvano. Seus dados são protegidos com criptografia.</p>
                 </details>
             </div>
             <div class="text-center mt-8">
-                <p class="text-sm">
+                <p class="text-sm" style="color: #F8FAFC;">
                     Ainda tem dúvidas? 
-                    <a href="https://wa.me/5519998102792" class="highlight-blue hover:underline font-medium" target="_blank">
+                    <a href="https://wa.me/5519998102792" style="color: #3B82F6; text-decoration: none;" class="font-medium hover:underline" target="_blank">
                         <i class="fab fa-whatsapp mr-1"></i>Fale no WhatsApp
                     </a>
                 </p>
@@ -619,37 +584,35 @@
     </section>
 
     <!-- FINAL CTA -->
-    <section class="section text-center">
+    <section class="section text-center" style="background: linear-gradient(to bottom, #0F172A, #1E293B);">
         <div class="container max-w-2xl">
             <h2 class="mb-4">Pronto para <span class="highlight-purple">criar sua história</span>?</h2>
-            <p class="text-lg mb-8">
+            <p class="text-lg mb-8" style="color: rgba(248,250,252,0.95);">
                 Por apenas <strong class="highlight-green text-2xl">R$45</strong>, leve o livro <strong class="highlight-blue">Ouvir Para Criar</strong> + comunidade com bônus secretos + playlist colaborativa.
             </p>
             
-            <!-- Order summary limpo -->
             <div class="card mb-8 text-left max-w-md mx-auto">
-                <h4 class="font-semibold mb-4 flex items-center gap-2"><i class="fas fa-receipt text-primary"></i> Seu pedido</h4>
+                <h4 class="font-semibold mb-4 flex items-center gap-2" style="color: #F8FAFC;"><i class="fas fa-receipt" style="color: #8B5CF6;"></i> Seu pedido</h4>
                 <div class="space-y-3 mb-4">
-                    <div class="flex justify-between"><span class="muted">Ouvir Para Criar (PDF)</span><span class="font-bold highlight-green">R$45</span></div>
-                    <div class="flex justify-between"><span class="muted">Comunidade + Bônus Secretos</span><span class="font-bold text-accent">Incluído ✓</span></div>
-                    <div class="flex justify-between"><span class="muted">Playlist Colaborativa</span><span class="font-bold text-accent">Incluído ✓</span></div>
+                    <div class="flex justify-between"><span style="color: #94A3B8;">Ouvir Para Criar (PDF)</span><span class="font-bold" style="color: #10B981;">R$45</span></div>
+                    <div class="flex justify-between"><span style="color: #94A3B8;">Comunidade + Bônus Secretos</span><span class="font-bold" style="color: #10B981;">Incluído ✓</span></div>
+                    <div class="flex justify-between"><span style="color: #94A3B8;">Playlist Colaborativa</span><span class="font-bold" style="color: #10B981;">Incluído ✓</span></div>
                 </div>
-                <div class="border-t border-white/10 pt-4 flex justify-between items-center">
-                    <span class="font-semibold">Total</span>
-                    <span class="text-2xl font-bold highlight-green">R$45</span>
+                <div class="border-t pt-4 flex justify-between items-center" style="border-color: rgba(255,255,255,0.1);">
+                    <span class="font-semibold" style="color: #F8FAFC;">Total</span>
+                    <span class="text-2xl font-bold" style="color: #10B981;">R$45</span>
                 </div>
             </div>
             
-            <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" 
-               class="btn-primary text-lg mb-6">
+            <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" class="btn-primary text-lg mb-6">
                 <i class="fas fa-lock"></i> Garantir acesso por R$45 agora
             </a>
             
-            <p class="text-sm muted mb-6">
-                <i class="fas fa-shield-alt text-accent mr-1"></i> Pagamento 100% seguro • Garantia de 7 dias • Acesso vitalício
+            <p class="text-sm mb-6" style="color: #94A3B8;">
+                <i class="fas fa-shield-alt" style="color: #10B981;"></i> Pagamento 100% seguro • Garantia de 7 dias • Acesso vitalício
             </p>
             
-            <div class="flex justify-center gap-4 opacity-70">
+            <div class="flex justify-center gap-4" style="opacity: 0.7;">
                 <i class="fab fa-cc-visa text-2xl"></i>
                 <i class="fab fa-cc-mastercard text-2xl"></i>
                 <i class="fas fa-qrcode text-2xl" title="PIX"></i>
@@ -658,27 +621,25 @@
     </section>
 
     <!-- FOOTER -->
-    <footer style="border-top: 1px solid rgba(255,255,255,0.08); padding: 32px 0; text-align: center; font-size: 0.875rem; color: var(--muted);">
+    <footer style="border-top: 1px solid rgba(255,255,255,0.08); padding: 32px 0; text-align: center; font-size: 0.875rem; color: #94A3B8;">
         <div class="container">
             <p class="mb-2">© 2025 Ouvir Para Criar. Todos os direitos reservados.</p>
             <p class="text-xs">
-                <a href="#" class="hover:text-primary transition">Termos</a> • 
-                <a href="#" class="hover:text-primary transition">Privacidade</a> • 
-                <a href="https://wa.me/5519998102792" class="hover:text-primary transition" target="_blank">Contato</a>
+                <a href="#" style="color: #94A3B8; text-decoration: none;" class="hover:text-primary transition">Termos</a> • 
+                <a href="#" style="color: #94A3B8; text-decoration: none;" class="hover:text-primary transition">Privacidade</a> • 
+                <a href="https://wa.me/5519998102792" style="color: #94A3B8; text-decoration: none;" class="hover:text-primary transition" target="_blank">Contato</a>
             </p>
-            <p class="text-xs mt-4 opacity-50">Este site não é afiliado ao Facebook ou qualquer entidade do Meta.</p>
+            <p class="text-xs mt-4" style="color: rgba(148,163,184,0.5);">Este site não é afiliado ao Facebook ou qualquer entidade do Meta.</p>
         </div>
     </footer>
 
     <script>
-        // Sticky CTA: aparece após scroll de 400px
         window.addEventListener('scroll', () => {
             const cta = document.getElementById('stickyCta');
             if (window.scrollY > 400) cta.classList.add('visible');
             else cta.classList.remove('visible');
         }, { passive: true });
 
-        // Smooth scroll para âncoras
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -687,7 +648,6 @@
             });
         });
 
-        // Acessibilidade: fechar details ao abrir outro
         document.querySelectorAll('details').forEach(detail => {
             detail.addEventListener('toggle', function() {
                 if (this.open) {
