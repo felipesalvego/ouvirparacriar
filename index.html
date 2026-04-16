@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ouvir Para Criar: Transforme sua escuta em criação sonora autêntica. Livro + comunidade com bônus secretos + playlist por R$45.">
+    <meta name="description" content="Ouvir Para Criar: Transforme sua escuta em criação sonora autêntica. Oferta por tempo limitado!">
     <meta name="author" content="Felipe Salvego">
     <title>Ouvir Para Criar – Desperte Sua Criatividade | R$45</title>
     
@@ -15,17 +15,6 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#8B5CF6',
-                        'primary-dark': '#7C3AED',
-                        secondary: '#3B82F6',
-                        accent: '#10B981',
-                        dark: '#0F172A',
-                        'dark-2': '#1E293B',
-                        'dark-3': '#334155',
-                        light: '#F8FAFC',
-                        muted: '#94A3B8',
-                    },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Space Grotesk', 'sans-serif'],
@@ -45,10 +34,10 @@
         }
         .space-grotesk { font-family: 'Space Grotesk', sans-serif; }
         
-        h1 { font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; font-weight: 700; margin-bottom: 1.25rem; color: #F8FAFC; }
-        h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; font-weight: 700; margin-bottom: 1rem; color: #F8FAFC; }
-        h3 { font-size: 1.25rem; line-height: 1.3; font-weight: 600; margin-bottom: 0.75rem; color: #F8FAFC; }
-        h4 { font-weight: 600; margin-bottom: 0.5rem; color: #F8FAFC; }
+        h1 { font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; font-weight: 700; margin-bottom: 1.25rem; color: #F8FAFC !important; }
+        h2 { font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.25; font-weight: 700; margin-bottom: 1rem; color: #F8FAFC !important; }
+        h3 { font-size: 1.25rem; line-height: 1.3; font-weight: 600; margin-bottom: 0.75rem; color: #F8FAFC !important; }
+        h4 { font-weight: 600; margin-bottom: 0.5rem; color: #F8FAFC !important; }
         p { margin-bottom: 1rem; color: rgba(248, 250, 252, 0.92); }
         
         .highlight-purple { color: #8B5CF6 !important; font-weight: 600; }
@@ -72,14 +61,34 @@
         
         .price-box {
             background-color: #1E293B !important;
-            border: 1px solid rgba(139, 92, 246, 0.25);
-            border-radius: 16px; padding: 20px 24px;
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            border-radius: 16px; padding: 24px;
+            position: relative; overflow: hidden;
+        }
+        .price-box::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, #8B5CF6, #10B981, #3B82F6);
         }
         .price-old { text-decoration: line-through; opacity: 0.5; font-size: 1.25rem; }
-        .price-new { font-size: 2.25rem; font-weight: 800; color: #10B981 !important; letter-spacing: -0.5px; }
+        .price-new { font-size: 2.5rem; font-weight: 800; color: #10B981 !important; letter-spacing: -0.5px; }
         .price-badge {
-            background: #10B981 !important; color: #0F172A !important; font-size: 0.75rem; font-weight: 700;
-            padding: 4px 10px; border-radius: 6px; display: inline-block; margin-left: 8px;
+            background: linear-gradient(135deg, #EF4444, #DC2626) !important;
+            color: white !important; font-size: 0.75rem; font-weight: 700;
+            padding: 4px 12px; border-radius: 6px; display: inline-block; margin-left: 8px;
+            animation: pulse-badge 2s infinite;
+        }
+        @keyframes pulse-badge {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .urgency-text {
+            color: #EF4444 !important; font-weight: 600; font-size: 0.875rem;
+            animation: flash 3s infinite;
+        }
+        @keyframes flash {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
         }
         
         .card {
@@ -152,7 +161,7 @@
     <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" 
        class="sticky-cta" id="stickyCta" aria-label="Comprar por R$45">
         <div class="btn-primary w-full text-sm">
-            <i class="fas fa-bolt"></i> Garantir acesso por <strong>R$45</strong>
+            <i class="fas fa-bolt"></i> R$45 por tempo limitado!
         </div>
     </a>
 
@@ -170,7 +179,7 @@
                     <p class="text-xl font-medium mb-6" style="color: #F8FAFC;">Transforme sua forma de ouvir e criar música com método único.</p>
                     
                     <p class="mb-6" style="color: rgba(248,250,252,0.92);">
-                        <strong class="highlight-blue">Ouvir Para Criar</strong> é o guia definitivo para desenvolver sua escuta criativa e produzir música autêntica. Por apenas <strong class="highlight-green">R$45</strong>, você recebe:
+                        <strong class="highlight-blue">Ouvir Para Criar</strong> é o guia definitivo para desenvolver sua escuta criativa e produzir música autêntica.
                     </p>
                     
                     <ul class="check-list mb-8">
@@ -178,30 +187,32 @@
                         <li><span class="check">✓</span> Acesso vitalício à comunidade exclusiva</li>
                         <li><span class="check">✓</span> Playlist colaborativa com referências curadas</li>
                         <li><span class="check">✓</span> Exercícios para aplicar imediatamente</li>
+                        <li><span class="check">✓</span> Bônus secretos liberados na comunidade</li>
                     </ul>
                     
+                    <!-- Preço com urgência -->
                     <div class="price-box mb-8 max-w-md">
-                        <div class="flex items-baseline gap-4 mb-3">
+                        <div class="flex items-baseline gap-4 mb-2">
                             <span class="price-old">R$90</span>
                             <span class="price-new">R$45</span>
-                            <span class="price-badge">50% OFF</span>
+                            <span class="price-badge">🔥 50% OFF</span>
                         </div>
-                        <p class="text-sm mb-4" style="color: #94A3B8;">• Oferta por tempo limitado • Economia de R$45</p>
+                        <p class="urgency-text mb-3">⚠️ PREÇO ESPECIAL POR TEMPO LIMITADO — pode voltar a R$90 a qualquer momento!</p>
                         
                         <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" 
-                           class="btn-primary w-full">
-                            <i class="fas fa-shopping-cart"></i> Quero meu livro + bônus secretos!
+                           class="btn-primary w-full text-lg">
+                            <i class="fas fa-bolt"></i> Garantir por R$45 AGORA!
                         </a>
                         
-                        <p class="text-xs text-center mt-3" style="color: #94A3B8;">
-                            <i class="fas fa-shield-alt" style="color: #10B981;"></i> Pagamento seguro • Garantia de 7 dias
+                        <p class="text-xs text-center mt-4" style="color: #94A3B8;">
+                            <i class="fas fa-shield-alt" style="color: #10B981;"></i> Pagamento seguro • Garantia de 7 dias • Acesso vitalício
                         </p>
                     </div>
                     
+                    <!-- Trust badges inline -->
                     <div class="flex flex-wrap gap-4 text-sm" style="color: #94A3B8;">
-                        <span><i class="fas fa-shield-alt" style="color: #10B981;"></i> Garantia 7 dias</span>
-                        <span><i class="fas fa-bolt" style="color: #3B82F6;"></i> Acesso imediato</span>
-                        <span><i class="fas fa-lock" style="color: #8B5CF6;"></i> 100% seguro</span>
+                        <span><i class="fas fa-users" style="color: #8B5CF6;"></i> +150 criadores já compraram</span>
+                        <span><i class="fas fa-star" style="color: #FACC15;"></i> 4.9/5 avaliação</span>
                     </div>
                 </div>
                 
@@ -351,7 +362,7 @@
                                 <p class="text-sm" style="color: #94A3B8;">Curadoria coletiva de referências sonoras</p>
                             </div>
                         </div>
-                        <div class="flex gap-4 items-start p-4 rounded-xl" style="background-color: rgba(51,65,85,0.3); border: 1px solid rgba(16,185,129,0.3);">
+                        <div class="flex gap-4 items-start p-4 rounded-xl" style="background: linear-gradient(135deg, rgba(16,185,129,0.15), rgba(139,92,246,0.15)); border: 1px solid rgba(16,185,129,0.3);">
                             <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(16,185,129,0.2);">
                                 <i class="fas fa-lock" style="color: #10B981;"></i>
                             </div>
@@ -384,7 +395,7 @@
                         Se você se identificou com <strong>pelo menos um</strong> desses pontos, 
                         <span class="highlight-purple font-semibold">Ouvir Para Criar</span> foi feito para você!
                     </p>
-                    <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" class="btn-primary">
+                    <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" class="btn-primary text-lg">
                         <i class="fas fa-check-circle"></i> Sim, quero começar!
                     </a>
                 </div>
@@ -476,57 +487,81 @@
     <section class="section" style="background: linear-gradient(to bottom, #1E293B, #0F172A);">
         <div class="container">
             <div class="text-center mb-10">
-                <span class="badge badge-secret mb-4"><i class="fas fa-gift"></i> Bônus Inclusos</span>
-                <h2>Valor extra sem custo adicional</h2>
+                <span class="badge badge-secret mb-4"><i class="fas fa-gift"></i> Tudo que você recebe</span>
+                <h2>Um pacote completo para sua jornada criativa</h2>
+                <p class="mt-3" style="color: #94A3B8;">Por tempo limitado, por apenas R$45 você leva tudo isso:</p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-                <div class="card" style="border-color: rgba(139,92,246,0.3);">
+            <div class="max-w-3xl mx-auto">
+                <div class="card mb-6">
                     <div class="flex items-start gap-4">
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(139,92,246,0.2); border: 1px solid rgba(139,92,246,0.3);">
-                            <i class="fas fa-users text-xl" style="color: #8B5CF6;"></i>
+                            <i class="fas fa-book text-xl" style="color: #8B5CF6;"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-2" style="color: #F8FAFC;">Comunidade Exclusiva</h3>
-                            <p class="text-sm mb-3" style="color: rgba(248,250,252,0.9);">Junte-se a um grupo vibrante de criadores. Troque experiências, discuta os exercícios e conecte-se com quem compartilha sua jornada.</p>
-                            <div class="rounded-lg p-3" style="background: rgba(51,65,85,0.5); border: 1px solid rgba(16,185,129,0.3);">
-                                <p class="text-xs flex items-center gap-1.5" style="color: #10B981;">
-                                    <i class="fas fa-lock"></i>
-                                    <strong>Bônus secretos liberados apenas aqui:</strong> workshops surpresa, conexões exclusivas e conteúdos inéditos
-                                </p>
-                            </div>
-                            <span class="inline-block text-xs px-3 py-1 rounded-full mt-3 font-medium" style="background: rgba(16,185,129,0.1); color: #10B981;">Valor: R$29 → Grátis</span>
+                            <h3 class="text-lg font-semibold mb-1" style="color: #F8FAFC;">Ouvir Para Criar (PDF)</h3>
+                            <p class="text-sm" style="color: #94A3B8;">50 páginas de conteúdo prático e exercícios para aplicar hoje mesmo</p>
                         </div>
                     </div>
                 </div>
                 
-                <div class="card">
+                <div class="card mb-6">
                     <div class="flex items-start gap-4">
                         <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(59,130,246,0.2); border: 1px solid rgba(59,130,246,0.3);">
-                            <i class="fas fa-headphones text-xl" style="color: #3B82F6;"></i>
+                            <i class="fas fa-users text-xl" style="color: #3B82F6;"></i>
                         </div>
                         <div>
-                            <h3 class="text-lg font-semibold mb-2" style="color: #F8FAFC;">Playlist Colaborativa</h3>
-                            <p class="text-sm mb-3" style="color: rgba(248,250,252,0.9);">Contribua com suas músicas favoritas e descubra referências dos outros membros. Uma fonte constante de inspiração.</p>
-                            <span class="inline-block text-xs px-3 py-1 rounded-full mt-3 font-medium" style="background: rgba(16,185,129,0.1); color: #10B981;">Valor: R$19 → Grátis</span>
+                            <h3 class="text-lg font-semibold mb-1" style="color: #F8FAFC;">Comunidade Exclusiva</h3>
+                            <p class="text-sm" style="color: #94A3B8;">Acesso vitalício a um grupo vibrante de criadores. Troque experiências, tire dúvidas e conecte-se com quem compartilha sua jornada.</p>
+                            <div class="rounded-lg p-3 mt-3" style="background: rgba(51,65,85,0.5); border: 1px solid rgba(16,185,129,0.3);">
+                                <p class="text-xs flex items-center gap-1.5" style="color: #10B981;">
+                                    <i class="fas fa-lock"></i>
+                                    <strong>Bônus secretos liberados apenas aqui:</strong> workshops surpresa, conexões exclusivas e conteúdos inéditos que não estão no livro
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="text-center mt-10">
-                <div class="inline-flex flex-wrap items-center justify-center gap-4 px-6 py-4 rounded-xl" style="background-color: rgba(51,65,85,0.5); border: 1px solid rgba(139,92,246,0.3);">
-                    <span class="text-lg" style="color: #F8FAFC;">Valor total dos bônus:</span>
-                    <span class="text-2xl font-bold" style="color: #10B981;">R$48+</span>
-                    <span class="text-sm line-through" style="color: #94A3B8;">R$0 para você</span>
-                    <span class="badge badge-secret text-xs"><i class="fas fa-star"></i> + bônus secretos</span>
+                
+                <div class="card mb-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(16,185,129,0.2); border: 1px solid rgba(16,185,129,0.3);">
+                            <i class="fas fa-headphones text-xl" style="color: #10B981;"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-1" style="color: #F8FAFC;">Playlist Colaborativa</h3>
+                            <p class="text-sm" style="color: #94A3B8;">Contribua com suas músicas favoritas e descubra referências dos outros membros. Uma fonte constante de inspiração para ampliar seu universo sonoro.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="text-center mt-10">
-                <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" class="btn-primary text-lg">
-                    <i class="fas fa-gift"></i> Quero o livro + bônus secretos por R$45!
-                </a>
+                
+                <div class="card mb-8" style="background: linear-gradient(135deg, rgba(16,185,129,0.1), rgba(139,92,246,0.1)) !important; border: 2px solid rgba(16,185,129,0.4) !important;">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(16,185,129,0.2); border: 1px solid rgba(16,185,129,0.3);">
+                            <i class="fas fa-star text-xl" style="color: #10B981;"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-semibold mb-1" style="color: #10B981;">🎁 Bônus Secretos Exclusivos</h3>
+                            <p class="text-sm" style="color: #94A3B8;">Conteúdos especiais, workshops surpresa e experiências únicas que serão liberadas apenas dentro da comunidade. Você descobre tudo ao entrar!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resumo do pacote -->
+                <div class="card text-center py-8" style="background: linear-gradient(135deg, rgba(139,92,246,0.15), rgba(16,185,129,0.15)) !important; border: 2px solid rgba(139,92,246,0.4) !important;">
+                    <p class="text-lg mb-2" style="color: #F8FAFC;">📦 <strong>Tudo isso por apenas:</strong></p>
+                    <div class="flex items-baseline justify-center gap-3 mb-3">
+                        <span class="price-old">R$90</span>
+                        <span class="price-new">R$45</span>
+                    </div>
+                    <p class="urgency-text mb-6">⚠️ PREÇO POR TEMPO LIMITADO — pode voltar a R$90 a qualquer momento!</p>
+                    <a href="https://pay.kirvano.com/83e9888c-5147-4b47-bcfc-e46867b293dd" target="_blank" class="btn-primary text-lg">
+                        <i class="fas fa-bolt"></i> Garantir tudo por R$45 AGORA!
+                    </a>
+                    <p class="text-xs mt-4" style="color: #94A3B8;">
+                        <i class="fas fa-shield-alt" style="color: #10B981;"></i> Pagamento seguro • Garantia de 7 dias • Acesso vitalício
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -587,16 +622,20 @@
     <section class="section text-center" style="background: linear-gradient(to bottom, #0F172A, #1E293B);">
         <div class="container max-w-2xl">
             <h2 class="mb-4">Pronto para <span class="highlight-purple">criar sua história</span>?</h2>
-            <p class="text-lg mb-8" style="color: rgba(248,250,252,0.95);">
+            <p class="text-lg mb-6" style="color: rgba(248,250,252,0.95);">
                 Por apenas <strong class="highlight-green text-2xl">R$45</strong>, leve o livro <strong class="highlight-blue">Ouvir Para Criar</strong> + comunidade com bônus secretos + playlist colaborativa.
             </p>
             
+            <div class="urgency-text mb-8 text-base">⚠️ PREÇO ESPECIAL POR TEMPO LIMITADO — pode voltar a R$90 a qualquer momento!</div>
+            
+            <!-- Order summary -->
             <div class="card mb-8 text-left max-w-md mx-auto">
                 <h4 class="font-semibold mb-4 flex items-center gap-2" style="color: #F8FAFC;"><i class="fas fa-receipt" style="color: #8B5CF6;"></i> Seu pedido</h4>
                 <div class="space-y-3 mb-4">
-                    <div class="flex justify-between"><span style="color: #94A3B8;">Ouvir Para Criar (PDF)</span><span class="font-bold" style="color: #10B981;">R$45</span></div>
-                    <div class="flex justify-between"><span style="color: #94A3B8;">Comunidade + Bônus Secretos</span><span class="font-bold" style="color: #10B981;">Incluído ✓</span></div>
-                    <div class="flex justify-between"><span style="color: #94A3B8;">Playlist Colaborativa</span><span class="font-bold" style="color: #10B981;">Incluído ✓</span></div>
+                    <div class="flex justify-between"><span style="color: #94A3B8;">Ouvir Para Criar (PDF)</span><span class="check"><i class="fas fa-check-circle"></i></span></div>
+                    <div class="flex justify-between"><span style="color: #94A3B8;">Comunidade Exclusiva</span><span class="check"><i class="fas fa-check-circle"></i></span></div>
+                    <div class="flex justify-between"><span style="color: #94A3B8;">Playlist Colaborativa</span><span class="check"><i class="fas fa-check-circle"></i></span></div>
+                    <div class="flex justify-between"><span style="color: #94A3B8;">Bônus Secretos</span><span class="check"><i class="fas fa-check-circle"></i></span></div>
                 </div>
                 <div class="border-t pt-4 flex justify-between items-center" style="border-color: rgba(255,255,255,0.1);">
                     <span class="font-semibold" style="color: #F8FAFC;">Total</span>
